@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Assembly Parade of Flowers.</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<link rel="stylesheet" type"text/css" href="main.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>The San Francisco First Annual General Assembly Parade of Flowers.</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<!-- handlebars template -->
+					<div class="flowers">
+						<script id="flowers-template" type="text/x-handlebars-template">
+						<ul>{{#each bud}}
+							<img src="{{this.imgURL}}">
+							<li>Flower name :{{ this.name }}</li>
+							<li>Color :{{ this.color }}</li>
+							<li>Number of petals :{{ this.petals }}</li>
+							<li>Size of petals :{{ this.petalSize }}</li>
+							{{/each }} </ul>
+						
+						</script>
+						<div id="flowers"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- jquery -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- handlebars -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
+		<!-- main JS -->
+		<script type="text/javascript" src="data.js"></script>
+	</body>
+</html>
